@@ -2,6 +2,13 @@
 
 > **Cisco Live Amsterdam 2026**
 
+## 👥 Authors
+
+- **Sabry Abdellah** - Customer Delivery Architect @ Cisco CX
+- **Mark Culverhouse** - Principal Architect @ Cisco CX
+
+---
+
 This repository contains the demo code for the DEVNET-2677 session, showcasing an AI-powered autonomous test triage system that integrates:
 
 - **CXTM** (CX Test Management) - Cisco's test automation platform
