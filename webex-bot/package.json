@@ -1,0 +1,33 @@
+{
+  "name": "Webex-Bot-Starter",
+  "version": "1.0.0",
+  "description": "Starter template for creating a Webex Teams bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node --use_strict index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbd/webexbotstarter.git"
+  },
+  "keywords": [
+    "Cisco",
+    "Webex",
+    "webex-bot-framework"
+  ],
+  "author": "Phil Bellanti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbd/webexbotstarter/issues"
+  },
+  "homepage": "https://github.com/tbd/webexbotstarter#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.14.0",
+    "webex-node-bot-framework": "^2.3.14"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}

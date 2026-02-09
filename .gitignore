@@ -1,0 +1,34 @@
+# Environment files with secrets
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Temp files
+*.tmp
+*.bak
+*.backup
+
+

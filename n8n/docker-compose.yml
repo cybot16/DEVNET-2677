@@ -1,0 +1,47 @@
+# ===========================================
+# n8n with Environment Variables for CXTM Triage
+# ===========================================
+# Use this when you're ready to switch to env vars:
+#   1. Copy .env.example to .env and fill in your values
+#   2. docker compose -f docker-compose.env.yml up -d
+#
+# To switch back to original:
+#   docker compose -f docker-compose.env.yml down
+#   docker compose up -d
+
+services:
+  n8n:
+    image: n8nio/n8n:1.121.0
+    container_name: n8n-main
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    environment:
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_RUNNERS_MODE=external
+      - N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0
+      - N8N_RUNNERS_AUTH_TOKEN=demo
+      - N8N_NATIVE_PYTHON_RUNNER=true
+      # CXTM Triage Workflow Environment Variables
+      - GITHUB_API_URL=${GITHUB_API_URL}
+      - GITHUB_REPO=${GITHUB_REPO}
+      - CXTM_API_URL=${CXTM_API_URL}
+      - CXTM_INTERFACE_DIAG_BATCH_ID=${CXTM_INTERFACE_DIAG_BATCH_ID}
+      - CXTM_BGP_DIAG_BATCH_ID=${CXTM_BGP_DIAG_BATCH_ID}
+      - CXTM_RESET_BATCH_ID=${CXTM_RESET_BATCH_ID}
+      - CXTM_FIX_JOBFILE_ID=${CXTM_FIX_JOBFILE_ID}
+      - JIRA_PROJECT_ID=${JIRA_PROJECT_ID}
+      - JIRA_BASE_URL=${JIRA_BASE_URL}
+
+  task-runners:
+    image: n8nio/runners:1.121.0
+    container_name: n8n-runners
+    depends_on:
+      - n8n
+    environment:
+      - N8N_RUNNERS_TASK_BROKER_URI=http://n8n-main:5679
+      - N8N_RUNNERS_AUTH_TOKEN=demo
+
+volumes:
+  n8n_data:
