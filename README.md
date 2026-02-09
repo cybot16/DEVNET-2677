@@ -129,7 +129,7 @@ This is a demo repository for educational purposes. Feel free to fork and adapt 
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE) for details.
+CISCO SAMPLE CODE LICENSE - See [LICENSE](LICENSE) for details.
 
 ---
 
