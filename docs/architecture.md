@@ -21,6 +21,10 @@
                                        └─────────────┘
 ```
 
+### n8n Workflow Visualization
+
+![CXTM Triage Workflow](workflow-diagram.png)
+
 ## Flow Description
 
 ### 1. Test Failure Detection

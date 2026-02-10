@@ -26,7 +26,11 @@ This repository contains the demo code for the DEVNET-2677 session, showcasing a
 5. **Automated Remediation** - Pushes fixes to Git and triggers CXTM to apply them
 6. **Jira Integration** - Creates and updates tickets throughout the process
 
-## 📁 Repository Structure
+## �️ Workflow Diagram
+
+![CXTM Triage Workflow](docs/workflow-diagram.png)
+
+## �📁 Repository Structure
 
 ```
 ├── webex-bot/              # Webex Bot (Node.js)
